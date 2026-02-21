@@ -17,11 +17,6 @@ package list
 2.那么要删除的节点就为N-n+1
 */
 
-type ListNode struct {
-	Node int
-	Next *ListNode
-}
-
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	guard := &ListNode{} // 哨兵节点，否则需要另外判断是否是删除的是头节点
 	guard.Next = head    // 哨兵的下个节点即为头节点
