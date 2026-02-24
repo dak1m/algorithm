@@ -27,7 +27,7 @@ func partition(head *ListNode, x int) *ListNode {
 	p1, p2 := d1, d2 // 作用：移动节点需要copy一个变量
 	p := head        // 同理
 	for p != nil {
-		if p.Node < x {
+		if p.Val < x {
 			p1.Next = p
 			p1 = p1.Next
 		} else {

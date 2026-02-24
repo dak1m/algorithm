@@ -172,7 +172,7 @@ func (g *Guard) Print() {
 func (g *Guard) Format() (list []int) {
 	cur := g.head
 	for cur != nil {
-		list = append(list, cur.Node)
+		list = append(list, cur.Val)
 		cur = cur.Next
 	}
 	return list

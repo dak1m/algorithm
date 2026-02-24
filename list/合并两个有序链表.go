@@ -20,7 +20,7 @@ func merge2OrderlyListNode(l1, l2 *ListNode) *ListNode {
 	guard := &ListNode{}
 	cur := guard
 	for l1 != nil && l2 != nil {
-		if l1.Node < l2.Node {
+		if l1.Val < l2.Val {
 			guard.Next = l1
 			l1 = l1.Next
 		} else {
