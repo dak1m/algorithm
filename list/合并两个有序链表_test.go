@@ -12,17 +12,17 @@ func TestMerge2OrderlyListNode(t *testing.T) {
 	}{
 		{
 			expected: &ListNode{
-				Node: 1,
+				Val: 1,
 				Next: &ListNode{
-					Node: 1,
+					Val: 1,
 					Next: &ListNode{
-						Node: 2,
+						Val: 2,
 						Next: &ListNode{
-							Node: 3,
+							Val: 3,
 							Next: &ListNode{
-								Node: 4,
+								Val: 4,
 								Next: &ListNode{
-									Node: 4,
+									Val:  4,
 									Next: nil,
 								},
 							},
