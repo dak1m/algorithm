@@ -38,6 +38,49 @@ func isPalindrome(head *ListNode) bool {
 	return false
 }
 
+func isPalindromeRecursion(head *ListNode) bool {
+	/*
+		递归后续遍历，利用树结构是链表是衍生
+	*/
+	left := head
+	res := true
+	var traverse func(head *ListNode)
+
+	traverse = func(right *ListNode) {
+		if right == nil {
+			return
+		}
+		traverse(right.Next)
+
+		// 后续遍历
+		if left.Val != right.Val {
+			res = false
+		}
+
+		left = left.Next
+	}
+
+	traverse(head)
+
+	return res
+}
+
+//func reverseList(head *ListNode) *ListNode {
+//	// 反转链表，与原链表做判断
+//	var newList *ListNode
+//	cur := head
+//	for cur != nil {
+//		newNode := &ListNode{
+//			Val:  cur.Val,
+//			Next: newList,
+//		}
+//		newList = newNode
+//		cur = cur.Next
+//	}
+//
+//	return newList
+//}
+
 func reverseList(head *ListNode) *ListNode {
 	// 反转链表，与原链表做判断
 	var newList *ListNode
